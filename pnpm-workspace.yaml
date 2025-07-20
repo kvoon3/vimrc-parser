@@ -1,0 +1,15 @@
+catalogs:
+  cli:
+    '@antfu/eslint-config': ^4.17.0
+    '@antfu/ni': ^25.0.0
+    '@antfu/nip': latest
+    eslint: ^9.31.0
+    lint-staged: ^16.1.2
+    simple-git-hooks: ^2.13.0
+    tsdown: ^0.12.9
+    tsx: latest
+    typescript: ^5.8.3
+  test:
+    vitest: ^3.2.4
+  utils:
+    '@antfu/utils': ^9.2.0

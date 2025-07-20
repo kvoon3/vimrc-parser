@@ -1,0 +1,47 @@
+{
+  "name": "vimrc-parser",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.13.1",
+  "description": "parse vimrc to VS Code Vim config",
+  "author": "Kevin Kwong <kvoon@duck.com>",
+  "license": "MIT",
+  "keywords": [],
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "test": "vitest",
+    "up": "nlx taze -I major",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:cli",
+    "@antfu/ni": "catalog:cli",
+    "@antfu/nip": "catalog:cli",
+    "@antfu/utils": "catalog:utils",
+    "eslint": "catalog:cli",
+    "lint-staged": "catalog:cli",
+    "simple-git-hooks": "catalog:cli",
+    "tsdown": "catalog:cli",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "vitest": "catalog:test"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
+  }
+}
