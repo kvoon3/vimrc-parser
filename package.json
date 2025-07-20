@@ -1,7 +1,7 @@
 {
   "name": "vimrc-parser",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@10.13.1",
   "description": "parse vimrc to VS Code Vim config",
   "author": "Kevin Kwong <kvoon@duck.com>",
@@ -23,7 +23,8 @@
     "up": "nlx taze -I major",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "release": "nr build && bumpp && npm publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
@@ -43,5 +44,8 @@
   },
   "lint-staged": {
     "*": "eslint . --fix"
+  },
+  "dependencies": {
+    "bumpp": "^10.2.0"
   }
 }
