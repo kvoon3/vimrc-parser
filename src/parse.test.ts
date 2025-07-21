@@ -16,7 +16,7 @@ describe('parse', () => {
 
     expect(parseVimrc(keybindings)).toMatchInlineSnapshot(`
       {
-        "vim.normalModeKeyBindings": [
+        "normalModeKeyBindings": [
           {
             "after": [
               "<c-w>",
@@ -28,7 +28,7 @@ describe('parse', () => {
             ],
           },
         ],
-        "vim.normalModeKeyBindingsNonRecursive": [
+        "normalModeKeyBindingsNonRecursive": [
           {
             "before": [
               "<leader>",

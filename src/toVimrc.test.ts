@@ -5,7 +5,7 @@ import { toVimrc } from './toVimrc'
 describe('to vimrc', () => {
   it('vim config -> vimrc', () => {
     const configs = {
-      'vim.normalModeKeyBindings': [
+      normalModeKeyBindings: [
         {
           before: ['leader', 'c', 'c'],
           names: ['Claude Code', 'run claude'],
@@ -263,7 +263,7 @@ describe('to vimrc', () => {
           ],
         },
       ],
-      'vim.normalModeKeyBindingsNonRecursive': [
+      normalModeKeyBindingsNonRecursive: [
         {
           after: [
             '<c-w>',
@@ -837,7 +837,7 @@ describe('to vimrc', () => {
           ],
         },
       ],
-      'vim.visualModeKeyBindings': [
+      visualModeKeyBindings: [
         {
           before: [
             '<c-t>',
@@ -874,7 +874,7 @@ describe('to vimrc', () => {
           ],
         },
       ],
-      'vim.visualModeKeyBindingsNonRecursive': [
+      visualModeKeyBindingsNonRecursive: [
         {
           before: [
             ']',
@@ -1017,7 +1017,7 @@ describe('to vimrc', () => {
           ],
         },
       ],
-      'vim.insertModeKeyBindings': [
+      insertModeKeyBindings: [
         {
           before: [
             '<c-s>',
@@ -1037,7 +1037,7 @@ describe('to vimrc', () => {
       ],
     }
 
-    expect(toVimrc(configs)).toMatchSnapshot('short vim config')
+    expect(toVimrc(configs)).toMatchSnapshot('vimrc')
 
     expect(parseVimrc(toVimrc(configs))).toEqual(configs)
   })
