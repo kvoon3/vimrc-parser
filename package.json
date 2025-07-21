@@ -9,7 +9,8 @@
   "keywords": [],
   "exports": {
     "types": "./dist/index.d.ts",
-    "import": "./dist/index.js"
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -31,6 +32,7 @@
     "@antfu/ni": "catalog:cli",
     "@antfu/nip": "catalog:cli",
     "@antfu/utils": "catalog:utils",
+    "bumpp": "catalog:cli",
     "eslint": "catalog:cli",
     "lint-staged": "catalog:cli",
     "simple-git-hooks": "catalog:cli",
@@ -44,8 +46,5 @@
   },
   "lint-staged": {
     "*": "eslint . --fix"
-  },
-  "dependencies": {
-    "bumpp": "^10.2.0"
   }
 }

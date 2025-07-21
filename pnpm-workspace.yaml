@@ -3,6 +3,7 @@ catalogs:
     '@antfu/eslint-config': ^4.17.0
     '@antfu/ni': ^25.0.0
     '@antfu/nip': latest
+    bumpp: ^10.2.0
     eslint: ^9.31.0
     lint-staged: ^16.1.2
     simple-git-hooks: ^2.13.0
